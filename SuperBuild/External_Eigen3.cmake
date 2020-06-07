@@ -50,6 +50,4 @@ endif()
 
 mark_as_superbuild(${proj}_DIR:PATH)
 ExternalProject_Message(${proj} "${proj}_DIR:${${proj}_DIR}")
-# mark_as_superbuild(EIGEN_INCLUDE_DIR:PATH)
-# ExternalProject_Message(${proj} "EIGEN_INCLUDE_DIR:${EIGEN_INCLUDE_DIR}")
 
