@@ -27,7 +27,7 @@ if(NOT DEFINED ${proj}_DIR AND NOT ${SUPERBUILD_TOPLEVEL_PROJECT}_USE_SYSTEM_${p
 
   ExternalProject_SetIfNotDefined(
    ${SUPERBUILD_TOPLEVEL_PROJECT}_${proj}_GIT_TAG
-   "pcl-1.9.1"
+   "pcl-1.10.1"
    QUIET
    )
 
@@ -52,8 +52,8 @@ if(NOT DEFINED ${proj}_DIR AND NOT ${SUPERBUILD_TOPLEVEL_PROJECT}_USE_SYSTEM_${p
       -DCMAKE_C_FLAGS:STRING=${pcl_common_c_flags} 
       -DWITH_QT:BOOL=ON
       -DQt5_DIR:PATH=${Qt5_DIR}
-      -DWITH_VTK:BOOL=ON
-      -DVTK_DIR:PATH=${VTK_DIR}
+      -DWITH_VTK:BOOL=OFF
+      #-DVTK_DIR:PATH=${VTK_DIR}
       -DPCL_SHARED_LIBS:BOOL=ON
       -DBUILD_apps:BOOL=OFF
       -DBUILD_examples:BOOL=OFF

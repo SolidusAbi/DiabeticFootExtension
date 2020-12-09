@@ -33,7 +33,7 @@ if(NOT DEFINED ${proj}_DIR AND NOT ${SUPERBUILD_TOPLEVEL_PROJECT}_USE_SYSTEM_${p
 
   ExternalProject_Add(${proj}
     ${${proj}_EP_ARGS}
-    URL "https://download.pytorch.org/libtorch/cu101/libtorch-cxx11-abi-shared-with-deps-1.3.1.zip"
+    URL "https://download.pytorch.org/libtorch/cu110/libtorch-shared-with-deps-1.7.0%2Bcu110.zip"
     SOURCE_DIR ${EP_SOURCE_DIR}
     CONFIGURE_COMMAND ${CMAKE_COMMAND} -E echo
       "This CONFIGURE_COMMAND is just here as a placeholder."

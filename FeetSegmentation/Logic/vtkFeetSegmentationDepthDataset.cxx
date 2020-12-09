@@ -8,7 +8,7 @@
 #include <pcl/filters/extract_indices.h>
 #include <pcl/filters/passthrough.h>
 #include <pcl/common/transforms.h>
-#include <pcl/io/pcd_io.h>
+// #include <pcl/io/pcd_io.h>
 
 // Qt Includes
 #include <QtConcurrent/QtConcurrentMap>
@@ -59,7 +59,7 @@ vtkFeetSegmentationDepthDataset::~vtkFeetSegmentationDepthDataset()
 void vtkFeetSegmentationDepthDataset::applyMask(vtkImageData *mask)
 {
   // Tmp
-  pcl::io::savePCDFile("preMaskedPCD.pcd", *cloud);
+  // pcl::io::savePCDFile("preMaskedPCD.pcd", *cloud);
 
   vtkSmartPointer<vtkImageMask> maskFilter =
       vtkSmartPointer<vtkImageMask>::New();
@@ -82,7 +82,7 @@ void vtkFeetSegmentationDepthDataset::applyMask(vtkImageData *mask)
   pcl::transformPointCloud(*cloud, *cloud, img2pc);
 
   // Tmp
-  pcl::io::savePCDFile("maskedPCD.pcd", *cloud);
+  // pcl::io::savePCDFile("maskedPCD.pcd", *cloud);
 }
 
 // ---------------------------------------------------------------

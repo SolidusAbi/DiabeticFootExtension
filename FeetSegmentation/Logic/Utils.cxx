@@ -104,7 +104,7 @@ torch::Tensor Utils::binarize(torch::Tensor &tensor, double threshold)
 }
 
 //----------------------------------------------------------
-#include <pcl/io/pcd_io.h>
+// #include <pcl/io/pcd_io.h>
 // To remove
 pcl::PointCloud<pcl::PointXYZ> Utils::vtkImageToPointCloud(vtkImageData *depthImg)
 {
@@ -123,7 +123,7 @@ pcl::PointCloud<pcl::PointXYZ> Utils::vtkImageToPointCloud(vtkImageData *depthIm
   }
 
   //tmp
-  pcl::io::savePCDFile("test.pcd", pointCloud);
+  // pcl::io::savePCDFile("test.pcd", pointCloud);
   return pointCloud;
 }
 
@@ -155,7 +155,7 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr Utils::vtkImageToPointCloud2(vtkImageData *d
     std::copy(results.begin(), results.end(), pcData);
   }
 
-  pcl::io::savePCDFile("test.pcd", *pointCloud);
+  // pcl::io::savePCDFile("test.pcd", *pointCloud);
   return pointCloud;
 }
 

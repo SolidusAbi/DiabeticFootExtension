@@ -7,7 +7,8 @@ string(TOUPPER ${MODULE_NAME} MODULE_NAME_UPPER)
 
 #-----------------------------------------------------------------------------
 find_package(Torch QUIET)
-find_package(PCL QUIET COMPONENTS segmentation io visualization)
+#find_package(PCL QUIET COMPONENTS segmentation io visualization)
+find_package(PCL QUIET COMPONENTS segmentation)
 
 if (NOT Torch_FOUND OR NOT PCL_FOUND)
   message("Dependent libraries not found. ${MODULE_NAME} will not be built.")
@@ -16,7 +17,9 @@ endif()
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 # Export Torch target to Logic directory
-export(TARGETS torch_library APPEND FILE "Logic/${MODULE_NAME}Exports.cmake")
+# export(TARGETS torch_library APPEND FILE "Logic/${MODULE_NAME}Exports.cmake")
+#export(TARGETS TORCH_LIBRARIES APPEND FILE "Logic/${MODULE_NAME}Exports.cmake")
+
 
 #-----------------------------------------------------------------------------
 add_subdirectory(Logic)
